@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="StyleSheet/main.css" />
+        <script src="Scripts/knockout-3.4.2.js"></script>
+        <title>Edit Profile</title>
+    </head>
+    <body>
+        <header class="headSection">
+            <h1 id="heading">ClicknCheck</h1>
+        </header>
+        <div class="mainSection">
+            <div class="form-group"><h1>Recruiter Registration</h1></div> 
+            <div class="form-group">
+                    First name: <input data-bind="value: firstName" />
+            </div>
+            <div class="form-group">
+                Last name: <input data-bind="value: lastName" />
+            </div>
+            <div class="form-group">
+                Phone Number: <input data-bind="value: phone" />
+            </div>
+            <div class="form-group">
+                Email: <input data-bind="value: email" />
+            </div>
+            <div class="form-group">
+                Select a manager from list below: <select data-bind="options: $root.availableManagers, value: id, optionsText: 'name'"></select>
+            </div>
+            
+            <hr>
+            <div class="form-group"><h2>Enter Password Below</h2></div>
+            <div class="form-group">
+                <p>Enter Password: <input type="password" data-bind="value: lastName" /></p>
+            </div>
+            <div class="form-group">
+                <p>Confirm Password: <input type="password" data-bind="value: lastName" /></p>
+            </div>
+            <div class="form-group">
+                <button data-bind="click: register">Register</button>
+            </div>
+        </div>
+
+        <div class="footSection">
+        </div>
+
+        <script>
+            function editProfileViewModel(){
+                this.firstName = ko.observable("Bert");
+                this.lastName = ko.observable("Bertington");
+
+                this.availableManagers = ko.observableArray([
+                    {id: 1, name: "jack", lastName: "black", phobe: "012 333 4444"},
+                    {id: 2, name: "jack1", lastName: "black1", phobe: "012 333 4444"},
+                    {id: 3, name: "jack2", lastName: "black2", phobe: "012 333 4444"},
+                    {id: 4, name: "jack3", lastName: "black3", phobe: "012 333 4444"},
+                    {id: 5, name: "jack4", lastName: "black4", phobe: "012 333 4444"}
+                ]);
+
+                this.register = function(){
+                    
+                }
+
+            }
+            ko.applyBindings(new editProfileViewModel());
+        </script>
+    </body>
+</html>
