@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="StyleSheet/main.css" />
+        <script src="../../scripts/jquery-3.3.1.min.js"></script>
+        <script src="../../scripts/knockout-3.4.2.js"></script>        
+        <title>Edit Profile</title>
+    </head>
+    <body>
+        <header class="headSection">
+            <img id="logo" 
+                src="../../icons/main.svg" 
+                alt="clicknchck"
+                height="50px"
+                width="200px" />
+        </header>
+        <div class="mainSection">
+            <div class="form-group"><h1>Organisation Registration</h1></div> 
+            <div class="form-group">
+                Organisation name <input data-bind="value: name" />
+                <p class="error" data-bind="visible: nameEntered() == false">Please enter your organisation name</p>
+            </div>
+            <div class="form-group">
+                Description <input data-bind="value: description" />
+                <p class="error" data-bind="visible: descriptionEntered() == false">Please enter your organisation description</p>
+            </div>
+            <div class="form-group">
+                <button data-bind="click: RegisterOrganisation">Create Organisation</button>
+            </div>
+        </div>
+
+        <div class="footSection">
+        </div>
+        
+        <script src="Script/OrgVm.js"></script>
+    </body>
+</html>

@@ -1,3 +1,96 @@
+#logo {
+  padding-top: 0px;
+}
+
+button {
+  float: left;
+  padding: 10px 46px;
+  width: 100%;
+  font-size: 16px;
+  vertical-align: middle;
+  font-family: Arial;
+  color: white;
+  border-style: solid;
+  border-color: #0091d1;
+  background-color: #0091d1;
+  border-radius: 5px;
+}
+
+.createPassword {
+  margin-bottom: 0px;
+}
+
+label {
+  float: left;
+}
+
+.error {
+  margin-top: 0px;
+  font-size: 15px;
+  color: red;
+}
+
+#heading {
+  color: #02529c;
+}
+
+.headSection {
+  margin-bottom: 0px;
+  height: 137px;
+  background-color: white;
+  text-align: center;
+}
+
+.footSection {
+  height: 50px;
+  background-color: #02529c;
+}
+
+input {
+  width: 400px;
+  border: 1px solid #ABADB3;
+  border-right: 0;
+  border-top: 0;
+  border-left: 0;
+  height: 30px;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1 {
+  margin-top: 0px;
+}
+
+.mainSection {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 550px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.14);
+  text-align: center;
+}
+
+.form-group {
+  display: block;
+  width: 450px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 20px;
+  padding-bottom: 25px;
+  margin-bottom: 33px;
+}
+
+.text-center {
+  text-align: center;
+}
+
 body {
   font-family: HelveticaNeue;
   position: relative;
@@ -10,36 +103,12 @@ label {
   float: left;
 }
 
-
-.error {
-  margin-top: 0px;
-  font-size: 15px;
-  color: red;
-}
-
-
-.headSection {
-  margin-bottom: 0px;
-  height: 137px;
-  background-color: white;
-  text-align: center;
-}
-
-
-.headSection img{
+.headSection img {
   height: 29px;
   width: 177px;
   margin-top: 72px;
-  object-fit: contain;
-}
-
-.mainSection {
-  width: 622px;
-  height: fit-content;
-  margin: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.14);
-  background-color: #ffffff;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .registrationHeading {
@@ -60,19 +129,12 @@ label {
   font-weight: bold;
 }
 
-.form-group {
-  width: 471px;
-  display: block;
-  margin: auto;
-  margin-bottom:33px;
-}
-
 .inp {
   position: relative;
   margin: auto;
   width: 100%;
   max-width: 280px;
-  margin-top:16px
+  margin-top: 16px;
 }
 
 .inp .label {
@@ -87,25 +149,13 @@ label {
   line-height: 1.57;
   letter-spacing: 0.9px;
   color: #2b3844;
-  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  
 }
 
-.inp .border {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 471px;
-  vertical-align: middle;
-  background: #223254;
-  transform: scaleX(0);
-  transform-origin: 0 0;
-  transition: all 0.15s ease;
-}
-
-.inp input,.inp select {
+.inp input, .inp select {
   -webkit-appearance: none;
   width: 471px;
   height: 48px;
@@ -115,6 +165,7 @@ label {
   border-bottom: 1px solid #223254;
   background: none;
   border-radius: 0;
+  -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
   font-family: HelveticaNeue;
   font-size: 14px;
@@ -126,58 +177,28 @@ label {
   color: #2b3844;
 }
 
-.inp input:focus,.inp select:focus {
+.inp input:focus, .inp select:focus {
   background: none;
   outline: none;
 }
 
 .inp input:not(:placeholder-shown) + span {
   color: #2b3844;
-  transform: translateY(-26px) scale(0.75);
+  -webkit-transform: translateY(-26px) scale(0.75);
+          transform: translateY(-26px) scale(0.75);
 }
 
 .inp input:focus + span {
-  transform: translateY(-26px) scale(0.75);
+  -webkit-transform: translateY(-26px) scale(0.75);
+          transform: translateY(-26px) scale(0.75);
 }
+
 .inp input:focus + span + .border {
-  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .inp select {
   -webkit-appearance: menulist;
 }
-
-button {
-  border:0;
-  width: 471px;
-  height: 50px;
-  margin-top: 25px;
-  border-radius: 7px;
-  background-color: #0091d1;
-  font-family: HelveticaNeue;
-  font-size: 12px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 2.17;
-  letter-spacing: 0.8px;
-  text-align: center;
-  color: #ffffff;
-}
-
-.footSection {
-  background-color: #02529c;
-  position: absolute;
-  height: 50px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  color: #ffffff;
-  text-align: center;
-  
-}
-
-footer a{
-  display: inline;
-} 
-
+/*# sourceMappingURL=main.css.map */
