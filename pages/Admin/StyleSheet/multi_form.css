@@ -1,0 +1,188 @@
+body{
+    margin:0 auto;
+    padding:0;
+    text-align:center;
+    background-color:#FFFFFF;
+}
+#innerWrapper{
+    width:60vw;
+    padding:0px;
+    margin:0px auto;
+    font-family:helvetica;
+    position:relative;
+}
+
+#formContainer{
+    border: 1px solid white;
+    width:80vw;
+    height: 60vh;
+    padding:0px;
+    margin:10vh auto;
+    border-radius: 8px;
+    font-family:helvetica;
+    position:relative;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.14);
+}
+
+#progress_bar{
+    overflow: hidden;
+    counter-reset: step;
+}
+
+#progress_bar li{
+    list-style-type: none;
+    color: black;
+    width:25%;
+    float:left;
+    position: relative;
+}
+
+#progress_bar li:before{
+    content: counter(step);
+    counter-increment: step;
+    width: 45px;
+    line-height: 45px;
+    display: block;
+    color: #2b3844;
+    height: 45px;
+    background-color: #FFFFFF;
+    text-align: center;
+    border: 1px solid #2b3844;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    
+}
+
+#progress_bar li:after {
+    content: '';
+	width: 100%;
+	height: 10px;
+	background: #e6e9ec;
+	position: absolute;
+	left: -50%;
+	top: 18px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progress_bar li:first-child:after {
+/*connector not needed before the first step*/
+	content: none; 
+}
+
+#progress_bar li.active:before,  #progress_bar li.active:after{
+    color: #FFFFFF;
+    background-color: #0091d1;
+    border: 1px solid #FFFFFF;
+    /*@TODO 
+        Make each subsequent text on step bold
+    */
+}
+
+#formContainer h3{
+    position: relative;
+    top: 0px;
+    text-align: center;
+    color: #2b3844;
+}
+
+
+
+/*
+    Styles for fildsets and input
+*/
+
+.field1 {
+    border: 0px solid white;
+}
+
+#formContainer .field2, .field3, .done {
+    border: 0px solid white;
+    display: none;
+}
+.form-group {
+    width: 471px;
+    display: block;
+    margin: auto;
+    margin-bottom:33px;
+    }
+    
+.inp {
+    position: relative;
+    top: -25px;
+    font-family: HelveticaNeue;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    margin-top:16px
+    }
+    
+.inp .label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-family: HelveticaNeue;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 0.9px;
+    color: #2b3844;
+    transform-origin: 0 0;
+    transition: all 0.2s ease;
+    
+}
+.inp .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 471px;
+    vertical-align: middle;
+    background: #223254;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all 0.15s ease;
+}
+    
+.inp input {
+    -webkit-appearance: none;
+    width: 22vw;
+    height: 8vh;
+    border: 0px;
+    font-family: HelveticaNeue;
+    vertical-align: middle;
+    border-bottom: 1px solid #223254;
+    background: none;
+    border-radius: 0;
+    transition: all 0.15s ease;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 0.9px;
+    color: #2b3844;
+    }
+    
+.inp input:focus {
+    background: none;
+    outline: none;
+}
+    
+.inp input:focus + span {
+    transform: translateY(-26px) scale(0.75);
+}
+.inp input:focus + span + .border {
+    transform: scaleX(1);
+}
+
+div #textbox{
+    position: relative;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 3vh auto;
+    width: 30vw;
+    height: 18vh;
+
+}
