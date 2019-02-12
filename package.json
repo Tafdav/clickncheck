@@ -1,0 +1,22 @@
+{
+  "name": "clickncheck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tafdav/clickncheck.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tafdav/clickncheck/issues"
+  },
+  "homepage": "https://github.com/Tafdav/clickncheck#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0"
+  }
+}
