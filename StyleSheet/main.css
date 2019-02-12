@@ -1,3 +1,38 @@
+button {
+  float: left;
+  padding: 10px 46px;
+  width: 100%;
+  font-size: 16px;
+  vertical-align: middle;
+  font-family: "Helvetica Neue";
+  color: white;
+  border-style: solid;
+  border-color: #0091d1;
+  background-color: #0091d1;
+  border-radius: 5px;
+}
+
+select {
+  margin-top: 5px;
+  height: 29px;
+  text-align-last: center;
+  width: 240px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  font-size: 16px;
+  vertical-align: middle;
+  font-family: "Helvetica Neue";
+  color: white;
+  border-style: solid;
+  border-color: #0091d1;
+  background-color: #0091d1;
+  border-radius: 5px;
+}
+
+select:focus {
+  outline: none;
+}
+
 body {
   font-family: "Helvetica Neue";
 }
@@ -13,6 +48,8 @@ label {
 button {
   float: left;
   border-radius: 7px;
+  border-style: solid;
+  border-color: #0091d1;
   background-color: #0091d1;
   color: white;
   font-family: Arial;
@@ -46,11 +83,17 @@ button {
 
 input {
   width: 400px;
-  border: 1px solid #0091d1;
-  border-radius: 5px;
+  border: 1px solid #ABADB3;
+  border-right: 0;
+  border-top: 0;
+  border-left: 0;
   height: 30px;
   font-size: 16px;
   padding-left: 5px;
+}
+
+input:focus {
+  outline: none;
 }
 
 h1 {

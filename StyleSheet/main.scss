@@ -1,14 +1,44 @@
 $background : #ffffff;;
 $button:  #0091d1;
 $borderRadius: 5px;
+$font :'Helvetica Neue';
 @mixin left() {
     float: left;
 }
 @mixin center(){
     text-align:center;
 }
+@mixin button(){
+    font-size:16px;
+    vertical-align: middle;
+    font-family:$font;
+    color:white;
+    border-style: solid;
+    border-color: $button;
+    background-color: $button;
+    border-radius: 5px;
+}
+button{
+    @include left();
+   padding:10px 46px;
+   width: 100%;
+   @include button();
+}
+select{
+    //background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+    margin-top: 5px;
+    height: 29px; 
+    text-align-last:center;
+    //overflow: hidden;
+    width: 240px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    @include button();
+    
+}
+select:focus {outline: none; }
 body{
-    font-family: "Helvetica Neue"; 
+    font-family: $font; 
 }
 .createPassword{
     margin-bottom: 0px;
@@ -19,6 +49,8 @@ label{
 button{
      @include left();
     border-radius: 7px;
+    border-style: solid;
+    border-color: $button;
     background-color: $button;
 	color: white;
 	font-family:Arial;
@@ -47,12 +79,15 @@ button{
 }
 input{
     width: 400px;
-    border: 1px solid $button;
-	border-radius: $borderRadius;
+    border: 1px solid #ABADB3;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
     height: 30px;
     font-size:16px;
     padding-left: 5px;
 }
+input:focus {outline: none; }
 h1{
     margin-top: 0px;
 }
@@ -76,4 +111,5 @@ h1{
 .text-center{
      @include center();
 }
+
 
