@@ -1,7 +1,7 @@
 $background : #ffffff;;
 $button:  #0091d1;
 $borderRadius: 5px;
-$font :'Helvetica Neue';
+$font :'Ariel';
 @mixin left() {
     float: left;
 }
@@ -17,6 +17,9 @@ $font :'Helvetica Neue';
     border-color: $button;
     background-color: $button;
     border-radius: 5px;
+}
+#logo{
+    padding-top: 0px;
 }
 button{
     @include left();
@@ -37,7 +40,7 @@ select{
     
 }
 select:focus {outline: none; }
-body{
+*{
     font-family: $font; 
 }
 .createPassword{
