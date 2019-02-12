@@ -1,4 +1,4 @@
-$background : #DCDCDC;
+$background : #ffffff;;
 $button:  #0091d1;
 $borderRadius: 5px;
 @mixin left() {
@@ -7,7 +7,12 @@ $borderRadius: 5px;
 @mixin center(){
     text-align:center;
 }
-
+body{
+    font-family: "Helvetica Neue"; 
+}
+.createPassword{
+    margin-bottom: 0px;
+}
 label{
     @include left();
 }
@@ -22,12 +27,19 @@ button{
     vertical-align: middle;
     width: 100%;
 }
+.error{
+    margin-top: 0px;
+    font-size: 15px;
+    color: red;
+}
 #heading{
-    color: white;
+    color: #02529c;
 }
 .headSection{
+    margin-bottom: 0px; 
     height: 50px;
-    background-color: #02529c;
+    background-color: white;
+    @include center();
 }
 .footSection{
     height: 50px;
@@ -41,8 +53,14 @@ input{
     font-size:16px;
     padding-left: 5px;
 }
+h1{
+    margin-top: 0px;
+}
 .mainSection{
-    margin-top: 0;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 600px;
     background-color: $background;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.14);
      @include center();
@@ -54,7 +72,6 @@ input{
     margin: 0 auto;
     font-size: 20px;
     padding-bottom: 25px;
-    margin-bottom: 15px
 }
 .text-center{
      @include center();

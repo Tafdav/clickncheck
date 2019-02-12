@@ -6,39 +6,45 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link rel="stylesheet" href="StyleSheet/main.css" />
-        <script src="Scripts/knockout-3.4.2.js"></script>
+        <link rel="stylesheet" href="StyleSheet/main.css" />        
         <title>Edit Profile</title>
     </head>
     <body>
         <header class="headSection">
-            <h1 id="heading">ClicknCheck</h1>
+            <h1 id="heading">clickncheck</h1>
         </header>
         <div class="mainSection">
             <div class="form-group"><h1>Recruiter Registration</h1></div> 
             <div class="form-group">
-                    First name: <input data-bind="value: firstName" />
+                First name <input data-bind="value: firstName" />
+                <p class="error" data-bind="visible: firstNameEntered() == false">Please enter your first name</p>
             </div>
             <div class="form-group">
-                Last name: <input data-bind="value: lastName" />
+                Last name <input data-bind="value: lastName" />
+                <p class="error" data-bind="visible: lastNameEntered() == false">Please enter your last name</p>
             </div>
             <div class="form-group">
-                Phone Number: <input data-bind="value: phone" />
+                Phone Number <input data-bind="value: phone" />
+                <p class="error" data-bind="visible: phoneEntered() == false">Please enter your phone number</p>
             </div>
             <div class="form-group">
-                Email: <input data-bind="value: email" />
+                Email <input data-bind="value: email" />
+                <p class="error" data-bind="visible: emailEntered() == false">Please enter your email address</p>
             </div>
             <div class="form-group">
-                Select a manager from list below: <select data-bind="options: $root.availableManagers, value: id, optionsText: 'name'"></select>
+                Select a manager from list below: 
+                <select data-bind="options: $root.availableManagers, optionsCaption: 'Choose a manager', value: manager, optionsText: 'name'"></select>
             </div>
             
             <hr>
-            <div class="form-group"><h2>Enter Password Below</h2></div>
+            <!--div class="form-group" id="createPassword"><h2 >Enter Password Below</h2></div>-->
             <div class="form-group">
-                <p>Enter Password: <input type="password" data-bind="value: lastName" /></p>
+                Enter Password <input type="password" data-bind="value: password" />
+                <p class="error" data-bind="visible: passwordEntered() == false">Please enter password</p>
             </div>
             <div class="form-group">
-                <p>Confirm Password: <input type="password" data-bind="value: lastName" /></p>
+                Confirm Password <input type="password" data-bind="value: confirmPassword" />
+                <p class="error" data-bind="visible: matchPassword() == false">Passwords do not match</p>
             </div>
             <div class="form-group">
                 <button data-bind="click: register">Register</button>
@@ -47,26 +53,8 @@
 
         <div class="footSection">
         </div>
-
-        <script>
-            function editProfileViewModel(){
-                this.firstName = ko.observable("Bert");
-                this.lastName = ko.observable("Bertington");
-
-                this.availableManagers = ko.observableArray([
-                    {id: 1, name: "jack", lastName: "black", phobe: "012 333 4444"},
-                    {id: 2, name: "jack1", lastName: "black1", phobe: "012 333 4444"},
-                    {id: 3, name: "jack2", lastName: "black2", phobe: "012 333 4444"},
-                    {id: 4, name: "jack3", lastName: "black3", phobe: "012 333 4444"},
-                    {id: 5, name: "jack4", lastName: "black4", phobe: "012 333 4444"}
-                ]);
-
-                this.register = function(){
-                    
-                }
-
-            }
-            ko.applyBindings(new editProfileViewModel());
-        </script>
+        <script src="scripts/jquery-3.3.1.min.js"></script>
+        <script src="scripts/knockout-3.4.2.js"></script>
+        <script src="scripts/main.js"></script>
     </body>
 </html>

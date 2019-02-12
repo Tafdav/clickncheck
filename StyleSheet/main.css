@@ -1,3 +1,11 @@
+body {
+  font-family: "Helvetica Neue";
+}
+
+.createPassword {
+  margin-bottom: 0px;
+}
+
 label {
   float: left;
 }
@@ -14,13 +22,21 @@ button {
   width: 100%;
 }
 
+.error {
+  margin-top: 0px;
+  font-size: 15px;
+  color: red;
+}
+
 #heading {
-  color: white;
+  color: #02529c;
 }
 
 .headSection {
+  margin-bottom: 0px;
   height: 50px;
-  background-color: #02529c;
+  background-color: white;
+  text-align: center;
 }
 
 .footSection {
@@ -37,9 +53,16 @@ input {
   padding-left: 5px;
 }
 
+h1 {
+  margin-top: 0px;
+}
+
 .mainSection {
-  margin-top: 0;
-  background-color: #DCDCDC;
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 600px;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.14);
           box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.14);
   text-align: center;
@@ -52,7 +75,6 @@ input {
   margin: 0 auto;
   font-size: 20px;
   padding-bottom: 25px;
-  margin-bottom: 15px;
 }
 
 .text-center {
