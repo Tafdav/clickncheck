@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="../Recruiter/StyleSheet/navbar.css" />
+        <link rel="stylesheet" href="../Recruiter/StyleSheet/main.css" />
+        <script src="../../scripts/jquery-3.3.1.min.js"></script>
+        <script src="../../scripts/knockout-3.4.2.js"></script> 
+        <script type="text/javascript" src="../../Scripts/multi_form.js"></script>
+        <link rel="stylesheet" type="text/css" href="StyleSheet/multi_form.css">
+    </head>
+    <body>
+        <!--Navbar-->
+
+        <div class="topnav">
+            <a>
+                <img id="logo" 
+                    src="../../icons/main.svg" 
+                    alt="clickncheck"
+                    height="20px"
+                    width="200px" />
+            </a>
+            <a class="active" href="#home">
+                <img id="logo" 
+                    src="../../icons/dashboard.svg" 
+                    alt="clickncheck"
+                    height="20px"
+                    width="30px" />
+                Dashboard
+            </a>
+            <a href="#">
+                <img id="logo" 
+                    src="../../icons/verification.svg" 
+                    alt="clickncheck"
+                    height="20px"
+                    width="30px" />
+                    Verification Request
+            </a>
+            <a href="#">
+                <img id="logo" 
+                    src="../../icons/job_profile.svg" 
+                    alt="clickncheck"
+                    height="20px"
+                    width="30px" />
+                Job Profiles
+            </a>
+            <a href="#">
+                <img id="logo" 
+                    src="../../icons/reports.svg" 
+                    alt="clickncheck"
+                    height="20px"
+                    width="30px" />
+                Reports
+            </a>
+            <a href="#">
+                <img id="logo" 
+                    src="../../icons/candidates.svg" 
+                    alt="clickncheck"
+                    height="20px"
+                    width="30px" />
+                Candidates
+            </a>
+        </div>
+        
+        <!--Dynamic form-->
+        <div id="formContainer">
+            <ul id='progress_bar'>
+                <li class="active">Create Job Profile Name</li>
+                <li>Select verification checks</li>
+                <li>Re-order Check Sequence</li>
+                <li>Next Steps</li> 
+            </ul>
+
+            <fieldset class="field1 current">
+                <!--Job profile name-->
+                <h3>Select job profile to base checks on</h3>
+                <div class="form-group">
+                    <label class="inp">
+                        <input placeholder=" " data-bind="value: name" />
+                        <span class="label">e.g. Job profile here</span>
+                    </label>
+
+                    <label for="jobProfileDescription">
+                        <textarea id="textbox" placeholder="Add a short explanation for the role" data-bind="value: text" ></textarea>
+                    </label>
+                </div>
+            </fieldset>
+            
+            <fieldset class="field2">
+
+            </fieldset class="field3">
+            
+            <div class="done">
+
+            </div>
+
+           
+        </div>
+        <div class="footSection">
+        </div>
+        <button id = "prev">Prev</button>
+        <button id = "next">Next</button>
+        
+    </body>
+</html>
